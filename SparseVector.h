@@ -47,6 +47,7 @@ public:
         for (int i = 0; i < this->size; i++) {
             cout << this->Get(i) << " ";
         }
+        cout << endl;
         this->imap->Print();
     }
 

@@ -64,15 +64,18 @@ private:
                     sequence->Append(s);
 //                    s->~ArraySequence();
                     s = new ArraySequence<const char *>();
+                    cout << "\n";
                 }
                 const char * cpstr = (char *)malloc(sizeof(sec->Get(i)));
                 memcpy(&cpstr, &sec->Get(i), sizeof(sec->Get(i)));
                 s->Append(cpstr);
+                cout << cpstr << " ";
             }
             if (s->GetLength() != 0) {
                 sequence->Append(s);
 //                s->~ArraySequence();
             }
+            cout << endl;
         }
         else {
             auto s = new ArraySequence<const char *>();
@@ -81,7 +84,9 @@ private:
                 if (dubleK - (int)strlen(sec->Get(i)) >= 0) {
                     dubleK -= (int)strlen(sec->Get(i));
                     s->Append(sec->Get(i));
+//                    cout << sec->Get(i) << endl;
                     dubleK--;
+
                 } else {
                     if (sequence->GetLength() % 10 == 0){
                         dubleK = k * 3 / 4;

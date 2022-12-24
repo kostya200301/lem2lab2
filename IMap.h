@@ -10,6 +10,15 @@
 #include <string.h>
 
 
+ostream& operator<<(ostream &os, pair<float, float>& d) {
+    return os  << '(' << d.first << ", " << d.second << ")";
+}
+
+ostream& operator<<(ostream &os, pair<int, int>& d) {
+    return os  << '(' << d.first << ", " << d.second << ")";
+}
+
+
 template <typename K, typename V>
 class IMap {
 private:
@@ -118,6 +127,8 @@ public:
     }
 
 };
+
+
 
 
 #endif //SEN2LAB2_IMAP_H

@@ -24,8 +24,6 @@
 int main() {
 
     srand(time(NULL));
-
-
     cout << "1 - AlfPointer\n";
     cout << "2 - FreqSequence\n";
     cout << "3 - BarChart\n";
